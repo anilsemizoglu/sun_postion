@@ -73,10 +73,15 @@ return sundec;
 
 int main()
 {
+for(;;){
 // aa.quae.nl/en/reken/zonpositie.html#mjx-eqn-eqdelta-zon
 int ye = 2004, mo = 4, da = 1, ho = 12 , mi = 0 , se = 0;
+cout << "enter year( yyyy )\n month( m )\n day( d )\n the hour is set default 12:00:00 \n";
+cin >> ye;
+cin >> mo;
+cin >> da;
 
-//find julian day
+// find julian day
 double julian = julian_day(ye,mo,da,ho,mi,se);
 
 cout << ye << "/" << mo << "/" << da << "-"<< ho << ":"<< mi << ":"<< se 
@@ -117,7 +122,8 @@ double sunDE = sun_dec(ecliptical_long);
 cout << "sun coordinates: RA   |    DEC \n";
 cout << "	       :" << sunRA << "  " << sunDE << endl;
 
-for(;;){} 
+// the observer's position on earth effectts the
+}
 	return 0;
 }
 
